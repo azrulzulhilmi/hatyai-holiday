@@ -38,19 +38,5 @@ Our trip is anchored at **Good Dream Premier Hatyai** (plotted on the map as sto
 
 ---
 
-## 🚀 Setup & Local Execution
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/azrulzulhilmi/hatyai-holiday.git
-   ```
-2. Navigate into the directory and launch a local HTTP server:
-   ```bash
-   npx http-server -p 8082 -c-1
-   ```
-3. Open your browser and navigate to:  
-   `http://127.0.0.1:8082/index.html`
-
----
-
 ## 📄 License & Attribution
 Maintained and updated exclusively by the **Hat Yai Holiday Crew 2026**.
