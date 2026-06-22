@@ -44,30 +44,57 @@ function getDistanceKm(lat1, lng1, lat2, lng2) {
 const ITINERARY = [
   // Friday (29 August 2026)
   {
-    id: 'friday-tbs',
+    id: 'friday-hentian-duta',
     day: 'friday',
     dayLabel: 'Friday',
     date: '29 Aug 2026',
     time: '11:00 PM',
-    name: 'Take Bus from TBS to Hentian Duta',
-    desc: 'Departure by bus from TBS to Hentian Duta (Return RM120)',
-    lat: 3.0824,
-    lng: 101.7107,
+    name: 'Hentian Duta Bus Terminal',
+    desc: 'Board overnight bus from Hentian Duta, Kuala Lumpur to Hat Yai (Return ~RM120).',
+    lat: 3.1738,
+    lng: 101.6705,
     icon: 'bus',
     category: 'transport',
-    showOnMap: false,
+    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=200&q=80'
+  },
+  {
+    id: 'friday-hatyai-arrival',
+    day: 'friday',
+    dayLabel: 'Friday',
+    date: '30 Aug 2026',
+    time: '7:00 AM',
+    name: 'Hat Yai Bus Stop (Arrival)',
+    desc: 'Arrive at Hat Yai Bus Stop after overnight bus journey from Kuala Lumpur.',
+    lat: 7.0080,
+    lng: 100.4740,
+    icon: 'bus',
+    category: 'transport',
     image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=200&q=80'
   },
 
   // Saturday (30 August 2026)
   {
-    id: 'saturday-hotel-dropoff',
+    id: 'saturday-busstop-start',
     day: 'saturday',
     dayLabel: 'Saturday',
     date: '30 Aug 2026',
     time: '8:00 AM',
-    name: 'Good Dream Premier Hatyai (Hotel)',
-    desc: 'Drop off luggage at hotel basecamp. Start of Saturday journey.',
+    name: 'Hat Yai Bus Stop',
+    desc: 'Start Saturday journey from Hat Yai Bus Stop and head to hotel basecamp.',
+    lat: 7.0080,
+    lng: 100.4740,
+    icon: 'bus',
+    category: 'transport',
+    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=200&q=80'
+  },
+  {
+    id: 'saturday-hotel-dropoff',
+    day: 'saturday',
+    dayLabel: 'Saturday',
+    date: '30 Aug 2026',
+    time: '8:30 AM',
+    name: 'Good Dream Premier Hatyai (Drop off Luggage)',
+    desc: 'Drop off luggage at hotel basecamp.',
     lat: 6.9950,
     lng: 100.4850,
     icon: 'building-2',
@@ -81,12 +108,12 @@ const ITINERARY = [
     date: '30 Aug 2026',
     time: '9:00 AM',
     name: 'Breakfast \u2013 Ban Han / Dimsum',
-    desc: 'Halal dimsum breakfast near Lee Garden area',
+    desc: 'Halal dimsum breakfast near Lee Garden area.',
     lat: 7.0062,
     lng: 100.4718,
     icon: 'utensils',
     category: 'food',
-    link: 'https://www.tiktok.com/search?q=ban+han+dim+sum+hat+yai',
+    link: 'https://vt.tiktok.com/ZSxXwhGQ4/',
     image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -95,8 +122,8 @@ const ITINERARY = [
     dayLabel: 'Saturday',
     date: '30 Aug 2026',
     time: '10:00 AM',
-    name: 'Rent Motorbike \u2013 Variety Tour',
-    desc: 'Rent motorbike or arrange Grab rides',
+    name: 'Rent Motorbike \u2013 Variety Tour / Grab',
+    desc: 'Rent motorbike or arrange Grab rides.',
     lat: 7.0075,
     lng: 100.4730,
     icon: 'bike',
@@ -110,12 +137,12 @@ const ITINERARY = [
     date: '30 Aug 2026',
     time: '11:00 AM',
     name: 'Cafe Amazon',
-    desc: 'Coffee and chill at Cafe Amazon',
+    desc: 'Coffee and chill at Cafe Amazon.',
     lat: 7.0050,
     lng: 100.4735,
     icon: 'coffee',
     category: 'cafe',
-    link: 'https://www.tiktok.com/search?q=cafe+amazon+hat+yai',
+    link: 'https://vt.tiktok.com/ZSxXwFU3H/',
     image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -125,12 +152,12 @@ const ITINERARY = [
     date: '30 Aug 2026',
     time: '12:00 PM',
     name: 'Nikukin Hand Roll Bar',
-    desc: 'Japanese-style hand roll and yakiniku lunch',
+    desc: 'Japanese-style hand roll and yakiniku lunch.',
     lat: 7.0055,
     lng: 100.4725,
     icon: 'utensils',
     category: 'food',
-    link: 'https://www.tiktok.com/search?q=nikukin+hat+yai',
+    link: 'https://vt.tiktok.com/ZSxXTN36o/',
     image: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -139,8 +166,8 @@ const ITINERARY = [
     dayLabel: 'Saturday',
     date: '30 Aug 2026',
     time: '1:00 PM',
-    name: 'Check In & Rest',
-    desc: 'Hotel check-in at hotel basecamp',
+    name: 'Check In & Rest (Good Dream Premier Hatyai)',
+    desc: 'Hotel check-in at hotel basecamp.',
     lat: 6.9950,
     lng: 100.4850,
     icon: 'bed-double',
@@ -154,12 +181,11 @@ const ITINERARY = [
     date: '30 Aug 2026',
     time: '3:00 PM',
     name: 'Central Hatyai',
-    desc: 'Shopping \u2013 Boots, Beautrium, Watson, Moshi Moshi, Potato Corner',
+    desc: 'Shopping \u2013 Boots, Beautrium, Watson, Moshi Moshi, Potato Corner.',
     lat: 6.9919,
     lng: 100.4830,
     icon: 'shopping-bag',
     category: 'shopping',
-    link: 'https://www.tiktok.com/search?q=central+hat+yai+shopping',
     image: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -169,12 +195,12 @@ const ITINERARY = [
     date: '30 Aug 2026',
     time: '5:00 PM',
     name: 'Panoramic Sunset Viewpoint',
-    desc: 'Scenic sunset at Hat Yai Municipal Park viewpoint',
+    desc: 'Scenic sunset viewpoint.',
     lat: 7.0425,
     lng: 100.5117,
     icon: 'sunset',
     category: 'scenic',
-    link: 'https://www.tiktok.com/search?q=municipal+park+hat+yai+sunset',
+    link: 'https://vt.tiktok.com/ZSxXTHt1G/',
     image: 'https://images.unsplash.com/photo-1472289065668-ce650ac443d2?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -184,12 +210,12 @@ const ITINERARY = [
     date: '30 Aug 2026',
     time: '8:00 PM',
     name: 'Florida Night Market',
-    desc: 'Street food and night market vibes',
+    desc: 'Street food and night market vibes.',
     lat: 7.0090,
     lng: 100.4700,
     icon: 'store',
     category: 'market',
-    link: 'https://www.tiktok.com/search?q=florida+night+market+hat+yai',
+    link: 'https://vt.tiktok.com/ZSxXwFU3H/',
     image: 'https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -229,12 +255,12 @@ const ITINERARY = [
     date: '31 Aug 2026',
     time: '8:00 AM',
     name: 'Breakfast \u2013 Makan Pagi Hatyai',
-    desc: 'Morning dim sum or local breakfast spot',
+    desc: 'Morning dim sum or local breakfast spot.',
     lat: 7.0048,
     lng: 100.4710,
     icon: 'utensils',
     category: 'food',
-    link: 'https://www.tiktok.com/search?q=makan+pagi+hat+yai',
+    link: 'https://vt.tiktok.com/ZSxX3tH6L/',
     image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -244,12 +270,12 @@ const ITINERARY = [
     date: '31 Aug 2026',
     time: '10:00 AM',
     name: 'Songkhla Old Town Sightseeing',
-    desc: 'Sightseeing in historic Songkhla (Grab ~RM40)',
+    desc: 'Sightseeing in historic Songkhla (Grab ~RM40).',
     lat: 7.1950,
     lng: 100.5900,
     icon: 'landmark',
     category: 'scenic',
-    link: 'https://www.tiktok.com/search?q=songkhla+old+town+guide',
+    link: 'https://vt.tiktok.com/ZSxX3cwRm/',
     image: 'https://images.unsplash.com/photo-1473163928189-364b2c4e1135?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -259,12 +285,12 @@ const ITINERARY = [
     date: '31 Aug 2026',
     time: '11:00 AM',
     name: 'Cafe Hopping \u2013 Cafe Moon',
-    desc: 'Cafe hopping in Songkhla Old Town',
+    desc: 'Cafe hopping in Songkhla Old Town.',
     lat: 7.1988,
     lng: 100.5951,
     icon: 'coffee',
     category: 'cafe',
-    link: 'https://www.tiktok.com/search?q=cafe+moon+songkhla',
+    link: 'https://vt.tiktok.com/ZSxX3xE5o/',
     image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -274,12 +300,12 @@ const ITINERARY = [
     date: '31 Aug 2026',
     time: '1:00 PM',
     name: 'Lunch \u2013 Banlay Restaurant',
-    desc: 'Lunch spot near Songkhla waterfront',
+    desc: 'Lunch spot near Songkhla waterfront.',
     lat: 7.1930,
     lng: 100.5870,
     icon: 'utensils',
     category: 'food',
-    link: 'https://www.tiktok.com/search?q=banlay+songkhla',
+    link: 'https://vt.tiktok.com/ZSxX39GnM/',
     image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -289,12 +315,12 @@ const ITINERARY = [
     date: '31 Aug 2026',
     time: '3:00 PM',
     name: 'Khlong Hae Floating Market',
-    desc: 'Floating market experience on the canal',
+    desc: 'Floating market experience on the canal.',
     lat: 7.0471,
     lng: 100.4741,
     icon: 'sailboat',
     category: 'market',
-    link: 'https://www.tiktok.com/search?q=khlong+hae+floating+market+hat+yai',
+    link: 'https://vt.tiktok.com/ZSxX3pfMr/',
     image: 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -303,13 +329,13 @@ const ITINERARY = [
     dayLabel: 'Sunday',
     date: '31 Aug 2026',
     time: '5:00 PM',
-    name: 'Municipal Park Hiking',
-    desc: 'Hiking at Hat Yai Municipal Park',
+    name: 'Municipal City (Hiking)',
+    desc: 'Hiking at Hat Yai Municipal Park.',
     lat: 7.0425,
     lng: 100.5117,
     icon: 'mountain',
     category: 'scenic',
-    link: 'https://www.tiktok.com/search?q=hat+yai+municipal+park+cable+car',
+    link: 'https://vt.tiktok.com/ZSxX3vph5/',
     image: 'https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -319,12 +345,12 @@ const ITINERARY = [
     date: '31 Aug 2026',
     time: '7:00 PM',
     name: 'Dinner \u2013 Lee Garden Plaza Area',
-    desc: 'Dinner at Lee Garden Plaza area',
+    desc: 'Dinner at Lee Garden Plaza area.',
     lat: 7.0065,
     lng: 100.4705,
     icon: 'utensils',
     category: 'food',
-    link: 'https://www.tiktok.com/search?q=lee+garden+plaza+food+hat+yai',
+    link: 'https://vt.tiktok.com/ZSxXwnHEX/',
     image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -334,12 +360,12 @@ const ITINERARY = [
     date: '31 Aug 2026',
     time: '8:00 PM',
     name: 'Traditional Thai Massage',
-    desc: 'Thai massage to end the day',
+    desc: 'Thai massage to end the day.',
     lat: 7.0070,
     lng: 100.4720,
     icon: 'sparkles',
     category: 'massage',
-    link: 'https://www.tiktok.com/search?q=massage+hat+yai',
+    link: 'https://vt.tiktok.com/ZSxX3qTAN/',
     image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -379,12 +405,12 @@ const ITINERARY = [
     date: '1 Sep 2026',
     time: '8:00 AM',
     name: 'Breakfast \u2013 Copper Wood Cafe',
-    desc: 'Cafe breakfast at Copper Wood Hatyai',
+    desc: 'Cafe breakfast at Copper Wood Hatyai.',
     lat: 7.0030,
     lng: 100.4680,
     icon: 'coffee',
     category: 'cafe',
-    link: 'https://www.tiktok.com/search?q=copper+wood+hat+yai',
+    link: 'https://vt.tiktok.com/ZSxXT9ePW/',
     image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -394,12 +420,12 @@ const ITINERARY = [
     date: '1 Sep 2026',
     time: '10:00 AM',
     name: 'Makro Hatyai',
-    desc: 'Shopping at Makro wholesale store',
+    desc: 'Shopping at Makro wholesale store.',
     lat: 7.0163,
     lng: 100.4907,
     icon: 'shopping-cart',
     category: 'shopping',
-    link: 'https://www.tiktok.com/search?q=makro+hat+yai',
+    link: 'https://vt.tiktok.com/ZSxXw7Au4/',
     image: 'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -409,7 +435,7 @@ const ITINERARY = [
     date: '1 Sep 2026',
     time: '12:00 PM',
     name: 'Checkout',
-    desc: 'Check out from hotel basecamp. Departure from hotel basecamp.',
+    desc: 'Check out from hotel basecamp.',
     lat: 6.9950,
     lng: 100.4850,
     icon: 'building-2',
@@ -423,12 +449,12 @@ const ITINERARY = [
     date: '1 Sep 2026',
     time: '1:00 PM',
     name: 'Lunch \u2013 Kai Tod Decha (Fried Chicken)',
-    desc: 'Famous Hat Yai fried chicken',
+    desc: 'Famous Hat Yai fried chicken.',
     lat: 7.0084,
     lng: 100.4767,
     icon: 'utensils',
     category: 'food',
-    link: 'https://www.tiktok.com/search?q=kai+tod+decha+hat+yai',
+    link: 'https://vt.tiktok.com/ZSxXwA7h4/',
     image: 'https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -438,12 +464,12 @@ const ITINERARY = [
     date: '1 Sep 2026',
     time: '2:00 PM',
     name: 'Souvenir Shopping \u2013 Kim Yong Market',
-    desc: 'Last-minute souvenir shopping at Kim Yong Market',
+    desc: 'Last-minute souvenir shopping at Kim Yong Market.',
     lat: 7.0125,
     lng: 100.4695,
     icon: 'store',
     category: 'market',
-    link: 'https://www.tiktok.com/search?q=kim+yong+market+hat+yai',
+    link: 'https://vt.tiktok.com/ZSxXwgy3b/',
     image: 'https://images.unsplash.com/photo-1607344645866-009c320c5ab8?auto=format&fit=crop&w=200&q=80'
   },
   {
@@ -456,6 +482,34 @@ const ITINERARY = [
     desc: 'Return motorbike and head to Hat Yai bus station. End of journey.',
     lat: 7.0080,
     lng: 100.4740,
+    icon: 'bus',
+    category: 'transport',
+    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=200&q=80'
+  },
+  {
+    id: 'monday-hatyai-busstop',
+    day: 'monday',
+    dayLabel: 'Monday',
+    date: '1 Sep 2026',
+    time: '6:00 PM',
+    name: 'Hat Yai Bus Stop',
+    desc: 'Depart by return bus to Kuala Lumpur.',
+    lat: 7.0080,
+    lng: 100.4740,
+    icon: 'bus',
+    category: 'transport',
+    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=200&q=80'
+  },
+  {
+    id: 'monday-hentian-duta',
+    day: 'monday',
+    dayLabel: 'Monday',
+    date: '2 Sep 2026',
+    time: '5:00 AM',
+    name: 'Hentian Duta Bus Terminal',
+    desc: 'Arrive back at Hentian Duta Bus Terminal, Kuala Lumpur.',
+    lat: 3.1738,
+    lng: 101.6705,
     icon: 'bus',
     category: 'transport',
     image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=200&q=80'
@@ -591,9 +645,6 @@ function renderMapData(dayFilter) {
     }).addTo(polylinesLayer);
   });
 
-  // Generate sequence numbers: hotel is always '0' (without incrementing counter)
-  let routeIdx = 0;
-
   // Place markers
   stops.forEach(stop => {
     let markerHtml = '';
@@ -608,8 +659,18 @@ function renderMapData(dayFilter) {
       if (stop.category === 'hotel') {
         stopNum = '0';
       } else {
-        routeIdx++;
-        stopNum = routeIdx;
+        const dayStops = ITINERARY.filter(s => s.day === stop.day && s.showOnMap !== false && s.connectRoute !== false);
+        let activeRouteIdx = 0;
+        for (let i = 0; i < dayStops.length; i++) {
+          const item = dayStops[i];
+          if (item.category !== 'hotel') {
+            activeRouteIdx++;
+          }
+          if (item.id === stop.id) {
+            stopNum = activeRouteIdx;
+            break;
+          }
+        }
       }
 
       const iconSvg = getIconSvg(stop.icon, 10, 2.5);
